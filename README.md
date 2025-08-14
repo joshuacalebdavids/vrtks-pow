@@ -1,6 +1,6 @@
-# WordPress Starter Kit
+# VRTKS WP Theme
 
-WSK is a starter kit for building custom WordPress websites. It uses a mono repo structure so you can easily build the plugins and theme for a project at the same time. 
+VRTKS WP is a starter kit for building custom WordPress websites. It uses a mono repo structure so you can easily build the plugins and theme for a project at the same time. 
 
 ### Benefits of a mono repo: 
 **Consolidated build command:** Build all plugins and the theme for a project with a single command.
@@ -11,7 +11,7 @@ WSK is a starter kit for building custom WordPress websites. It uses a mono repo
 
 
 ## Prerequisites 
-In order to build WordPress websites using WSK you will need the following installed on your machine.
+In order to build WordPress websites using VRTKS WP you will need the following installed on your machine.
 
 **Composer:** Instructions for installing Composer can be found at the following https://getcomposer.org/doc/00-intro.md. 
 
@@ -66,9 +66,9 @@ Lastly we need to build a dev bundle of the assets so that the theme works corre
 yarn build:dev
 ```
 
-Activate WSK Theme in Appearance>Themes
+Activate VRTKS WP Theme in Appearance>Themes
 
-Activate WSK Theme Support plugin 
+Activate VRTKS WP Theme Support plugin 
 
 Install and activate [Advanced Custom Fields PRO](https://www.advancedcustomfields.com/)
 
