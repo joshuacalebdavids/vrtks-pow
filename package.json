@@ -1,0 +1,88 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "wp-content/themes/wsk-theme",
+    "wp-content/plugins/wsk-theme-support"
+  ],
+  "scripts": {
+    "build:dev": "lerna run build:dev",
+    "build:dev:watch": "lerna run build:dev:watch",
+    "build:prod": "lerna run build:prod",
+    "createLayout": "./scripts/bin/index.js createLayout",
+    "format": "yarn format:js && yarn format:package-json && yarn format:php && yarn format:scss",
+    "format:js": "lerna run format:js",
+    "format:package-json": "npx sort-package-json && lerna run format:package-json",
+    "format:php": "lerna run format:php",
+    "format:scss": "lerna run format:scss",
+    "postinstall": "husky install",
+    "lint": "yarn lint:js && yarn lint:php && yarn lint:scss",
+    "lint:js": "lerna run lint:js",
+    "lint:php": "lerna run lint:php",
+    "lint:scss": "lerna run lint:scss",
+    "prepare": "husky install",
+    "start": "./scripts/bin/index.js start"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.php": [
+      "./vendor/bin/phpcbf",
+      "./vendor/bin/phpcs"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "stylelint"
+    ],
+    "package.json": "npx sort-package-json"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@wordpress/babel-preset-default": "^7.7.0",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
+    "browser-sync": "^2.27.11",
+    "clean-webpack-plugin": "^4.0.0",
+    "colors": "^1.4.0",
+    "commander": "^9.4.1",
+    "composer": "^4.1.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cosmiconfig": "^8.0.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "husky": "^8.0.2",
+    "image-minimizer-webpack-plugin": "^3.8.1",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "lerna": "^6.3.0",
+    "lint-staged": "^13.1.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss": "^8.4.20",
+    "postcss-loader": "^7.0.2",
+    "prettier": "^2.8.1",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "sort-package-json": "^2.1.0",
+    "stylelint": "^15.10.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.75.0",
+    "webpack-merge": "^5.8.0",
+    "yarn": "^1.22.22"
+  }
+}

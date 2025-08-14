@@ -1,0 +1,26 @@
+{
+  "name": "@wsk/theme-support",
+  "version": "1.0.0",
+  "description": "WordPress Starter Kit - Theme Support.",
+  "bugs": {
+    "url": "https://github.com/vorteksdigital/wp-vrtks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vorteksdigital/wp-vrtks.git",
+    "directory": "wp-content/plugins/wsk-theme-support"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "../../../scripts/bin/index.js build -d",
+    "build:dev:watch": "node ../../../scripts/bin/index.js build -d -w",
+    "build:prod": "../../../scripts/bin/index.js build",
+    "format:js": "prettier --write --no-error-on-unmatched-pattern --ignore-path ../../../.prettierignore \"**/*.js\"",
+    "format:package-json": "npx sort-package-json",
+    "format:php": "../../../vendor/bin/phpcbf ./ --extensions=php",
+    "format:scss": "prettier --write --no-error-on-unmatched-pattern --ignore-path ../../../.prettierignore \"**/*.scss\"",
+    "lint:js": "eslint --report-unused-disable-directives --format=pretty --ignore-path ../../../.eslintignore \"**/*.js\"",
+    "lint:php": "../../../vendor/bin/phpcs ./ --extensions=php -s",
+    "lint:scss": "stylelint --allow-empty-input \"**/*.scss\""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": ["en-gb"],
+  "words": [],
+  "ignoreWords": [
+    "ABSPATH",
+    "browsersync",
+    "dashicon",
+    "dashicons",
+    "gsap",
+    "kses",
+    "shortcode",
+    "shortcodes",
+    "wskt",
+    "wskts"
+  ],
+  "import": []
+}

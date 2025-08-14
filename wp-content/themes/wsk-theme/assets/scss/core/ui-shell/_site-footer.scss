@@ -1,0 +1,26 @@
+//
+// Site Footer
+// --------------------------------------------------
+
+#colophon {
+  @include padding-y;
+}
+
+#main-footer {
+  @include padding-bottom-tight;
+}
+
+#sub-footer {
+  font-size: $font-size-sm;
+
+  .sub-footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .copyright-details {
+    display: inline-block;
+    margin-left: map-get($spacers, 5);
+  }
+}
