@@ -20,7 +20,7 @@ function wskt_get_navbar_brand()
 		wskts_get_inline_svg(
 			get_template_directory() . '/dist/img/logo-vrtks.svg',
 			array(
-				'width'  => 606,
+				'width'  => 400,
 				'height' => 40,
 				'class'  => 'icon',
 			)

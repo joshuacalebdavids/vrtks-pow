@@ -1,0 +1,36 @@
+// --------------------------------------------------
+// Typography
+// --------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+body {
+  font-family: $font-family-base;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  color: #121212;
+  font-size: 16px;
+}
+
+// Utility classes for font weights
+@each $name, $weight in $font-weights {
+  .font-#{$name} {
+    font-weight: $weight !important;
+  }
+
+  .font-#{$name}-italic {
+    font-weight: $weight !important;
+    font-style: italic !important;
+  }
+}

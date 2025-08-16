@@ -23,29 +23,31 @@ $classes = apply_filters('wskt_navbar_classes', $default_classes);
 
 	<div class="container-fluid">
 		<nav class="nav">
-			<label class="menu-switch nav__links">
-				<input type="checkbox" id="menu-toggle" name="menu-toggle" />
-				<span class="menu-switch__wrapper">
-					<span class="menu-switch__row">
-						<span class="menu-switch__dot"></span>
-						<span class="menu-switch__dot"></span>
+			<div class="nav__links">
+				<label class="menu-switch">
+					<input type="checkbox" id="menu-toggle" name="menu-toggle" />
+					<span class="menu-switch__wrapper">
+						<span class="menu-switch__row">
+							<span class="menu-switch__dot"></span>
+							<span class="menu-switch__dot"></span>
+						</span>
+						<span class="menu-switch__row menu-switch__row--bottom">
+							<span class="menu-switch__dot"></span>
+							<span class="menu-switch__dot"></span>
+						</span>
+						<span class="menu-switch__row-vertical">
+							<span class="menu-switch__dot"></span>
+							<span class="menu-switch__dot menu-switch__dot--middle"></span>
+							<span class="menu-switch__dot"></span>
+						</span>
+						<span class="menu-switch__row-horizontal">
+							<span class="menu-switch__dot"></span>
+							<span class="menu-switch__dot menu-switch__dot--middle-horizontal"></span>
+							<span class="menu-switch__dot"></span>
+						</span>
 					</span>
-					<span class="menu-switch__row menu-switch__row--bottom">
-						<span class="menu-switch__dot"></span>
-						<span class="menu-switch__dot"></span>
-					</span>
-					<span class="menu-switch__row-vertical">
-						<span class="menu-switch__dot"></span>
-						<span class="menu-switch__dot menu-switch__dot--middle"></span>
-						<span class="menu-switch__dot"></span>
-					</span>
-					<span class="menu-switch__row-horizontal">
-						<span class="menu-switch__dot"></span>
-						<span class="menu-switch__dot menu-switch__dot--middle-horizontal"></span>
-						<span class="menu-switch__dot"></span>
-					</span>
-				</span>
-			</label>
+				</label>
+			</div>
 
 
 			<!-- <div id="navbarSupportedContent" class="collapse navbar-collapse nav__links">
@@ -53,7 +55,7 @@ $classes = apply_filters('wskt_navbar_classes', $default_classes);
 				?>
 			</div> -->
 
-			<div class="nav_logo">
+			<div class="nav__logo">
 				<?php wskt_navbar_brand(); ?>
 			</div>
 

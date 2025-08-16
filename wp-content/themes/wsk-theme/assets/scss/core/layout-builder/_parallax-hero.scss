@@ -35,37 +35,40 @@
   .header {
     @include absolute-center;
     width: 100vw;
-    @include flex-center(column, 1.5rem);
+    @include flex-center(column, 0.5rem);
     text-align: center;
-    color: red;
+    text-transform: uppercase;
+    color: #121212;
     transform-origin: center;
     @include will-change(transform, opacity);
 
     h1 {
-      width: 40%;
+      width: 50%;
       margin-bottom: 0.5rem;
 
-      font-family: 'Host-Grotesk', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 400;
+      font-size: 1.875rem;
+      font-weight: 600;
       line-height: 1.1;
-      color: red;
+      color: #121212;
     }
 
     p {
-      opacity: 0.35;
+      opacity: 0.4;
+      text-transform: uppercase;
+      font-weight: 500;
     }
   }
 
   .client-logos {
-    width: 30%;
+    // width: 30%;
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 
     .client-logo {
       flex: 1;
 
       img {
+        width: 100px;
         object-fit: contain;
       }
     }

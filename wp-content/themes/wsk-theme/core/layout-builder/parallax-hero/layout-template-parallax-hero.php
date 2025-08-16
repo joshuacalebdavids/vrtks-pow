@@ -20,14 +20,22 @@ $layout_classes_attrs = array(
 	<canvas></canvas>
 	<div class="layout__content">
 		<div class="header">
-			<h1>One unified workspace to build, test, and ship AI faster</h1>
-			<p>Trusted by</p>
-			<div class="client-logos">
-				<div class="client-logo"><img src="./img/logo-1.svg" alt="" /></div>
-				<div class="client-logo"><img src="./img/logo-2.svg" alt="" /></div>
-				<div class="client-logo"><img src="./img/logo-3.svg" alt="" /></div>
-				<div class="client-logo"><img src="./img/logo-4.svg" alt="" /></div>
-			</div>
+			<?php if ($args['title']) : ?>
+				<h1><?php echo esc_attr($args['title']); ?></h1>
+			<?php endif; ?>
+			<?php if ($args['content']) : ?>
+				<p><?php echo esc_attr($args['content']); ?></p>
+			<?php endif; ?>
+			<?php if (!empty($args['logos'])): ?>
+				<div class="client-logos">
+					<?php foreach ($args['logos'] as $logo): ?>
+						<div class="client-logo">
+							<img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt'] ?: 'Client logo'); ?>" />
+						</div>
+					<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
+
 		</div>
 	</div>
 </section>

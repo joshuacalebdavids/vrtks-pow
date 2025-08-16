@@ -2,6 +2,33 @@
 // Colour Scheme
 // --------------------------------------------------
 
+body.dark {
+  .colour-scheme {
+    &:not(section.layout--parallax-hero) {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #fafafa !important;
+
+        a {
+          color: #fafafa !important;
+        }
+      }
+
+      p {
+        color: #fafafa !important;
+      }
+
+      .icon {
+        color: #fafafa !important;
+      }
+    }
+  }
+}
+
 .colour-scheme {
   h1,
   h2,

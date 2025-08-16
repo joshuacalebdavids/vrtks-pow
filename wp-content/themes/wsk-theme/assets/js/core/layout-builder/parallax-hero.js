@@ -93,7 +93,28 @@ document.addEventListener('DOMContentLoaded', () => {
     context.drawImage(img, drawX, drawY, drawWidth, drawHeight);
   }
 
+  // function setupScrollTrigger() {
+  //   ScrollTrigger.create({
+  //     trigger: '.layout--parallax-hero',
+  //     start: 'top top',
+  //     end: `+=${window.innerHeight * 7}px`,
+  //     pin: true,
+  //     pinSpacing: true,
+  //     scrub: 1,
+  //     onUpdate: (self) => {
+  //       const progress = self.progress;
+
+  //       const animationProgress = Math.min(progress / 0.9, 1);
+  //       const targetFrame = Math.round(animationProgress * (frameCount - 1));
+  //       videoFrames.frame = targetFrame;
+  //       render();
+  //     },
+  //   });
+  // }
+
   function setupScrollTrigger() {
+    const content = document.querySelector('.layout--parallax-hero .layout__content'); // replace with your actual content selector
+
     ScrollTrigger.create({
       trigger: '.layout--parallax-hero',
       start: 'top top',
@@ -104,10 +125,24 @@ document.addEventListener('DOMContentLoaded', () => {
       onUpdate: (self) => {
         const progress = self.progress;
 
+        // Update video frames
         const animationProgress = Math.min(progress / 0.9, 1);
         const targetFrame = Math.round(animationProgress * (frameCount - 1));
         videoFrames.frame = targetFrame;
         render();
+
+        // Scale and fade content after 70%
+        const fadeStart = 0.6; // 70% scroll
+        if (progress >= fadeStart) {
+          const fadeProgress = (progress - fadeStart) / (1 - fadeStart);
+          const scale = 1 - fadeProgress * 0.2; // scale down to 0.8
+          const opacity = 1 - fadeProgress;
+          content.style.transform = `scale(${scale})`;
+          content.style.opacity = opacity;
+        } else {
+          content.style.transform = 'scale(1)';
+          content.style.opacity = 1;
+        }
       },
     });
   }
