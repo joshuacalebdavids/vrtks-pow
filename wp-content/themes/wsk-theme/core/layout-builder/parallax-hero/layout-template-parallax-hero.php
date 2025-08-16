@@ -1,35 +1,33 @@
 <?php
+
 /**
  * Layout Template - Parallax Hero
  *
  * @package WSK_Theme/Core
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 $layout_classes_attrs = array(
 	'layout_name'     => 'parallax-hero',
 	'padding_variant' => 'none',
-	'colour_scheme'   => 'dark',
-	'classes'         => array( 'layout--full-screen' ),
+	// 'colour_scheme'   => 'dark',
+	'classes'         => array('layout--full-screen'),
 );
 ?>
 
-<section class="<?php wskt_layout_classes( $layout_classes_attrs ); ?>">
-
-	<?php wskt_media( $args['background'], array( 'layout__background' ) ); ?>
-
+<section class="<?php wskt_layout_classes($layout_classes_attrs); ?>">
+	<canvas></canvas>
 	<div class="layout__content">
-		<?php
-		wskts_inline_svg(
-			get_template_directory() . '/dist/img/logo-digitronix.svg',
-			array(
-				'width'  => 148,
-				'height' => 20,
-				'class'  => 'icon',
-			)
-		);
-		?>
+		<div class="header">
+			<h1>One unified workspace to build, test, and ship AI faster</h1>
+			<p>Trusted by</p>
+			<div class="client-logos">
+				<div class="client-logo"><img src="./img/logo-1.svg" alt="" /></div>
+				<div class="client-logo"><img src="./img/logo-2.svg" alt="" /></div>
+				<div class="client-logo"><img src="./img/logo-3.svg" alt="" /></div>
+				<div class="client-logo"><img src="./img/logo-4.svg" alt="" /></div>
+			</div>
+		</div>
 	</div>
-
 </section>

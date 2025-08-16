@@ -1,0 +1,87 @@
+// --------------------------------------------------
+// Parallax Hero
+// --------------------------------------------------
+
+.layout--parallax-hero {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  overflow: hidden;
+
+  padding: 8px; // Inset content inward
+  box-sizing: border-box; // Ensures padding doesn't break size
+  border-radius: 15px; // Rounded container corners
+
+  .layout__title {
+    margin-bottom: 0;
+  }
+
+  canvas {
+    @include full-width-height;
+    object-fit: cover;
+    border-radius: 15px; // Matches outer corners
+    display: block;
+  }
+
+  .layout__content {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include preserve-3d;
+    padding: 0.5rem 0;
+  }
+
+  .header {
+    @include absolute-center;
+    width: 100vw;
+    @include flex-center(column, 1.5rem);
+    text-align: center;
+    color: red;
+    transform-origin: center;
+    @include will-change(transform, opacity);
+
+    h1 {
+      width: 40%;
+      margin-bottom: 0.5rem;
+
+      font-family: 'Host-Grotesk', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: red;
+    }
+
+    p {
+      opacity: 0.35;
+    }
+  }
+
+  .client-logos {
+    width: 30%;
+    display: flex;
+    gap: 0.5rem;
+
+    .client-logo {
+      flex: 1;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  .hero-img-container {
+    @include absolute-center;
+    width: 50%;
+    @include preserve-3d;
+  }
+
+  .hero-img {
+    position: relative;
+    @include full-width-height;
+    transform: translateZ(1000px);
+    opacity: 0;
+    @include will-change(transform, opacity);
+  }
+}

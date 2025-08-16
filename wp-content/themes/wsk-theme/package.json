@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build:dev": "../../../scripts/bin/index.js build -d",
+    "build:dev": "node ../../../scripts/bin/index.js build -d",
     "build:dev:watch": "node ../../../scripts/bin/index.js build -d -w",
     "build:prod": "../../../scripts/bin/index.js build",
     "format:js": "prettier --write --no-error-on-unmatched-pattern --ignore-path ../../../.prettierignore \"**/*.js\"",

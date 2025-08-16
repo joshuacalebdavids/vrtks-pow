@@ -7,3 +7,39 @@
     margin-bottom: 0;
   }
 }
+
+@mixin absolute-center($translate: true) {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  @if $translate {
+    transform: translate(-50%, -45%);
+  }
+}
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin preserve-3d($perspective: 1000px) {
+  transform-style: preserve-3d;
+  perspective: $perspective;
+}
+
+@mixin will-change($properties...) {
+  will-change: $properties;
+}
+
+@mixin full-width-height {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+}

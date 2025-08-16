@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Framework functions
  *
  * @package WSK_Theme
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Core
