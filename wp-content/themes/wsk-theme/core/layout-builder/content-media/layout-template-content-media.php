@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Layout Template - Content / Media
  *
  * @package WSK_Theme/Core
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 $layout_classes_attrs = array(
 	'layout_name'   => 'content-media',
@@ -13,7 +14,7 @@ $layout_classes_attrs = array(
 );
 
 // Prepare classes.
-$content_col_classes[] = 'g-col-12 g-col-lg-5';
+$content_col_classes[] = 'g-col-12 g-col-lg-6';
 $media_col_classes[]   = 'g-col-12 g-col-lg-6';
 
 // Animation classes
@@ -21,7 +22,7 @@ $content_col_classes[] = 'animation';
 $content_col_classes[] = 'animation--fade-in';
 $content_col_classes[] = 'animation--delay-4';
 
-if ( 'content-first' === $args['alignment'] ) {
+if ('content-first' === $args['alignment']) {
 	$content_col_classes[] = 'order-lg-first';
 
 	$media_col_classes[] = 'g-start-lg-7';
@@ -31,34 +32,35 @@ if ( 'content-first' === $args['alignment'] ) {
 }
 ?>
 
-<section class="<?php wskt_layout_classes( $layout_classes_attrs ); ?>">
+<section class="<?php wskt_layout_classes($layout_classes_attrs); ?>">
 
 	<div class="container-fluid">
 		<div class="layout__inner">
 
 			<div class="grid">
 
-				<div class="<?php echo esc_attr( implode( ' ', $media_col_classes ) ); ?>">
-					<?php wskt_media( $args['media'] ); ?>
+				<div class="<?php echo esc_attr(implode(' ', $media_col_classes)); ?>">
+					<?php wskt_media($args['media']); ?>
 				</div>
 
-				<div class="<?php echo esc_attr( implode( ' ', $content_col_classes ) ); ?>">
+				<div class="<?php echo esc_attr(implode(' ', $content_col_classes)); ?>">
 					<div class="layout__content">
 
-						<?php if ( $args['title'] ) : ?>
-						<header class="layout__header">
-							<h1><?php echo esc_attr( $args['title'] ); ?></h1>
-						</header>
+						<?php if ($args['title']) : ?>
+							<header class="layout__header">
+								<h1><?php echo esc_attr($args['title']); ?></h1>
+							</header>
 						<?php endif; ?>
 
-						<?php if ( $args['content'] ) : ?>
-						<div class="layout__body">
-							<?php echo $args['content']; // phpcs:ignore WordPress.Security.EscapeOutput ?>
-						</div>
+						<?php if ($args['content']) : ?>
+							<div class="layout__body">
+								<?php echo $args['content']; // phpcs:ignore WordPress.Security.EscapeOutput 
+								?>
+							</div>
 						<?php endif; ?>
 
 						<footer class="layout__footer">
-							<?php wskt_button( $args['button'] ); ?>
+							<?php wskt_button($args['button']); ?>
 						</footer>
 
 					</div>

@@ -25,6 +25,9 @@ require_once 'logo-grid/logo-grid.php';
 require_once 'metrics/metrics.php';
 require_once 'split-content/split-content.php';
 
+
+require_once 'intro-text/intro-text.php';
+
 /**
  * To Review - In figma design
  */
